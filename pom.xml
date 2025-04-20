@@ -26,7 +26,7 @@
         </configuration>
       </plugin>
 
-      <!-- WAR Plugin configuration for building WAR files -->
+      <!-- Updated WAR Plugin configuration -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
@@ -57,6 +57,7 @@
   </dependencies>
 
 </project>
+
 
 
 
