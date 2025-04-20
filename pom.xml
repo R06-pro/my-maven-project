@@ -12,37 +12,33 @@
     <name>Your Project Name</name>
 
     <properties>
-        <!-- Set Java version -->
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
     <dependencies>
-        <!-- Explicitly adding XStream dependency to solve initialization issues -->
+        <!-- Downgrade XStream to a more stable version for Java 17 -->
         <dependency>
             <groupId>com.thoughtworks.xstream</groupId>
             <artifactId>xstream</artifactId>
-            <version>1.4.18</version> <!-- Use latest version -->
+            <version>1.4.11.1</version> <!-- Downgrade XStream version -->
         </dependency>
 
-        <!-- Add any other dependencies your project may require -->
+        <!-- Other dependencies -->
     </dependencies>
 
     <build>
         <plugins>
-            <!-- Use a more recent version of maven-war-plugin for better compatibility -->
+            <!-- Updated maven-war-plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>3.2.3</version> <!-- Use this version for compatibility -->
+                <version>3.2.3</version> <!-- Ensure compatibility with Java 17 -->
             </plugin>
         </plugins>
     </build>
-
-    <repositories>
-        <!-- Add any custom repositories if required -->
-    </repositories>
 </project>
+
 
 
 
