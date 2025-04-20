@@ -18,14 +18,14 @@
     </properties>
 
     <dependencies>
-        <!-- Add any other dependencies your project may require -->
-
-        <!-- XStream dependency for compatibility with older maven-war-plugin -->
+        <!-- Explicitly adding XStream dependency to solve initialization issues -->
         <dependency>
             <groupId>com.thoughtworks.xstream</groupId>
             <artifactId>xstream</artifactId>
-            <version>1.4.18</version> <!-- Use this or the latest stable version -->
+            <version>1.4.18</version> <!-- Use latest version -->
         </dependency>
+
+        <!-- Add any other dependencies your project may require -->
     </dependencies>
 
     <build>
@@ -34,7 +34,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>3.2.3</version> <!-- Update to a compatible version -->
+                <version>3.2.3</version> <!-- Use this version for compatibility -->
             </plugin>
         </plugins>
     </build>
