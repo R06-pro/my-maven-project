@@ -10,32 +10,40 @@
     <packaging>war</packaging>
 
     <name>Your Project Name</name>
-    <url>http://maven.apache.org</url>
+
+    <properties>
+        <!-- Set Java version -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
 
     <dependencies>
-        <!-- Your existing dependencies go here -->
+        <!-- Add any other dependencies your project may require -->
+
+        <!-- XStream dependency for compatibility with older maven-war-plugin -->
+        <dependency>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <artifactId>xstream</artifactId>
+            <version>1.4.18</version> <!-- Use this or the latest stable version -->
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
-            <!-- Other plugins go here -->
-
-            <!-- Updated maven-war-plugin version to 3.3.0 -->
+            <!-- Use a more recent version of maven-war-plugin for better compatibility -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.0</version>
-                <configuration>
-                    <!-- Add any custom configuration here -->
-                </configuration>
+                <version>3.2.3</version> <!-- Update to a compatible version -->
             </plugin>
         </plugins>
     </build>
 
     <repositories>
-        <!-- Any repository configurations go here -->
+        <!-- Add any custom repositories if required -->
     </repositories>
 </project>
+
 
 
 
